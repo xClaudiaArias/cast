@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-weather {
+    width: 400px;
+    height: 600px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+}
+
+.location {
+    font-size: 20px;
+}
+
+.main-description {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.temp {
+    font-size: 52px;
+    font-weight: 600;
+}
+.description {
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+hr {
+    color: #e7e7e7;
+    width: 300px;
+    height: 2px;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 10px;
+}
+
+.min-max {
+    padding: 10px 0;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.min-max p {
+    font-size: 16px;
+}
