@@ -1,0 +1,22 @@
+.visibility {
+    background: #f6f6f6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 500px;
+    height: 220px;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+}
+
+.visibility p {
+    font-size: 20px;
+}
+
+.visibility .vis-num {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
