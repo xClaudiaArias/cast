@@ -5,6 +5,7 @@ import Visibility from '../Components/Visibility/Visibility'
 import Humidity from '../Components/Humidity/Humidity'
 import Pressure from '../Components/Pressure/Pressure'
 import Wind from '../Components/Wind/Wind'
+import Daily from '../Components/Daily/Daily'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                 <Humidity />
                 <Pressure />
                 <Wind />
+                <Daily />
             </div>
         </div>
     )

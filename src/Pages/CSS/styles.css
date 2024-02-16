@@ -5,9 +5,9 @@
 }
 
 .home .weather-descriptions {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     flex: 2;
     flex-wrap: wrap;
+    gap: 20px;
 }

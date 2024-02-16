@@ -1,0 +1,35 @@
+.daily {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1020px;
+    /* height: 200px; */
+    border-radius: 8px;
+    background: #f6f6f6;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+}
+
+.daily ul {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.daily ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily ul li p {
+    font-size: 20px;
+}
+
+.daily ul li .deg {
+    font-size: 30px;
+}
