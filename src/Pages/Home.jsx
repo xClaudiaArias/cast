@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CSS/styles.css'
 import MainWeather from '../Components/MainWeather/MainWeather'
 import Visibility from '../Components/Visibility/Visibility'
@@ -6,20 +6,25 @@ import Humidity from '../Components/Humidity/Humidity'
 import Pressure from '../Components/Pressure/Pressure'
 import Wind from '../Components/Wind/Wind'
 import Daily from '../Components/Daily/Daily'
+import { WeatherContext } from '../Context/WeatherContext'
 
 const Home = () => {
+    const { weather } = useContext(WeatherContext)
+
+    console.log(weather, " --> weather in home.jsx")
+    
     return (
         <div className='home'>
             <div className="main-w">
-                <MainWeather />
+                <MainWeather weather={weather}/>
             </div>
 
             <div className="weather-descriptions">
-                <Visibility />
-                <Humidity />
-                <Pressure />
-                <Wind />
-                <Daily />
+                <Visibility weather={weather}/>
+                <Humidity weather={weather}/>
+                <Pressure weather={weather}/>
+                <Wind weather={weather}/>
+                <Daily weather={weather}/>
             </div>
         </div>
     )

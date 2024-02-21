@@ -2,11 +2,14 @@ import React from 'react'
 import './Pressure.css'
 
 
-const Pressure = () => {
+const Pressure = (props) => {
+
+    const {weather} = props
+
     return (
         <div className='pressure'>
             <p>Pressure</p>
-            <p className='pres-num'>888</p>
+            <p className='pres-num'>{weather.main.pressure}</p>
         </div>
     )
 }
