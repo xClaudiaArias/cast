@@ -5,22 +5,26 @@ export const WeatherContext = createContext(null);
 
 const WeatherContextProvider = (props) => {
     const [weather, setWeather] = useState();
+    const [forecast, setForecast] = useState(null);
+    const [city, setCity] = useState('');
 
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await axios.get('https://api.openweathermap.org/data/2.5/weather?q=bronx&appid=eb5bf5cf252dcc79c75fe1ddbad6ceb3');
+                const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=eb5bf5cf252dcc79c75fe1ddbad6ceb3`);
+                const res2 = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=eb5bf5cf252dcc79c75fe1ddbad6ceb3`);
                 setWeather(res.data);
+                setForecast(res2.data);
                 console.log(JSON.stringify(res.data))
             } catch (err) {
                 console.log("Failed to get data: ", err.message)
             }
         }
         fetchData();
-    }, [])
+    }, [city])
 
-    console.log(weather, " -->> weather")
-    const contextValue = {weather}
+
+    const contextValue = {weather, setCity, forecast}
 
     return (
         <WeatherContext.Provider value={contextValue}>

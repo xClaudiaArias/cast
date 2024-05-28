@@ -2,21 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 1020px;
-    /* height: 200px; */
     border-radius: 8px;
     background: #f6f6f6;
     box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+    position: relative;
+}
+
+.daily h1 {
+    font-weight: 300;
+    margin-bottom: 5px;
 }
 
 .daily ul {
-    width: inherit;
+    width: 1000px;
     height: inherit;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    gap: 50px;
     list-style-type: none;
+    overflow: scroll;
 }
 
 .daily ul li {

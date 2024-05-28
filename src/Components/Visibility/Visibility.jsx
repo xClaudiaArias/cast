@@ -9,7 +9,6 @@ const Visibility = (props) => {
         <div className='visibility'>
             <p>Visibility</p>
             { weather.visibility ? <p className='vis-num'>{weather.visibility}</p> : <p>"Loading..."</p>}
-            {/* <p className='vis-num'>{weather.visibility}</p> */}
         </div>
     )
 }

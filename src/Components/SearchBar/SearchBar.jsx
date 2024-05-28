@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./SearchBar.css"
 import search_icon from '../../Assets/search-icon.png'
-
-const handleSubmit = (city, country) => {
-
-    alert("hello", city, country)
-
-}
+import { WeatherContext } from '../../Context/WeatherContext'
 
 const SearchBar = () => {
-    const [city, setCity] = useState("")
-    const [country, setCountry] = useState("")
+    const { setCity } = useContext(WeatherContext);
+    const [cityInput, setCityInput] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setCity(cityInput)
+
+    }
 
     return (
         <div className='search-bar'>
-            <form action="" method="post">
+            <form method="post">
                 <img className="search-icon" src={search_icon} alt="search icon" />
-                <input onChange={(e) => setCity(e.target.value)} type="text" name="city" id="city" placeholder="City"/>
-                <input onChange={(e) => setCountry(e.target.value)} type="text" name="country" id="country" placeholder="Country"/>
-                <button onClick={() => handleSubmit(city, country)}>Search</button>
+                <input onChange={(e) => setCityInput(e.target.value)} type="text" name="city" placeholder="City"/>
+                <button onClick={handleSubmit} >Search</button>
             </form>
         </div>
     )
