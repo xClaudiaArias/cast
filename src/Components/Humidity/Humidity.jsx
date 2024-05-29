@@ -3,13 +3,12 @@ import './Humidity.css'
 
 
 const Humidity = (props) => {
-    const {weather} = props
-    console.log(weather, " ---> humidity")
+    const {weather, dummyData} = props
+
     return (
         <div className='humidity'>
             <p>Humidity</p>
-            { weather.main.humidity ? <p className='hum-num'>{weather.main.humidity}</p> : <p>"Loading..."</p>}
-            {/* <p className='hum-num'>{weather.main.humidity} </p> */}
+            { weather ? <p className='hum-num'>{weather.main.humidity}</p> : <p className='hum-num'>{dummyData.main.humidity}</p>}
         </div>
     )
 }

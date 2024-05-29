@@ -9,22 +9,20 @@ import Daily from '../Components/Daily/Daily.jsx';
 import { WeatherContext } from '../Context/WeatherContext';
 
 const Home = () => {
-    const { weather, forecast } = useContext(WeatherContext);
-
-    console.log(weather, " --> weather in home.jsx");
+    const { weather, forecast, dummyData, dummyForecast } = useContext(WeatherContext);
 
     return (
         <div className='home'>
             <div className="main-w">
-                {weather && <MainWeather weather={weather} />}
+                {(weather || dummyData) && <MainWeather weather={weather} dummyData={dummyData} />}
             </div>
 
             <div className="weather-descriptions">
-                {weather && <Visibility weather={weather} />}
-                {weather && <Humidity weather={weather} />}
-                {weather && <Pressure weather={weather} />}
-                {weather && <Wind weather={weather} />}
-                {forecast && <Daily forecast={forecast} />}
+                {(weather || dummyData) && <Visibility weather={weather} dummyData={dummyData} />}
+                {(weather || dummyData) && <Humidity weather={weather} dummyData={dummyData} />}
+                {(weather || dummyData) && <Pressure weather={weather} dummyData={dummyData} />}
+                {(weather || dummyData) && <Wind weather={weather} dummyData={dummyData} />}
+                {(forecast || dummyForecast) && <Daily forecast={forecast} dummyForecast={dummyForecast} />}
             </div>
         </div>
     );

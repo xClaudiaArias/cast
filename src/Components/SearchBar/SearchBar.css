@@ -4,19 +4,21 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 30px;
 }
 
 .search-bar form {
-    width: 540px;
+    width: 300px;
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     border-radius: 50px;
-    gap: 20px;
+    gap: 10px;
     background: white;
     box-shadow: 1px 1px 2px #cbcbcb;
+    padding-right: 10px;
+    padding-left: 5px;
 }
 
 .search-bar form input {
@@ -29,6 +31,11 @@
 .search-bar form input::placeholder {
     color: #a3a3a3;
 
+}
+
+
+.search-bar form input:focus{
+    outline: none;
 }
 
 .search-bar form button {
