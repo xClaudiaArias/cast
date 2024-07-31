@@ -1,22 +1,26 @@
-import React from 'react'
-import "./Footer.css"
+import React from 'react';
+import './Footer.css';
+import { useLocation, Link } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+    const path = location.pathname;
+
     return (
         <div className='footer'>
             <div className='created'>
-                Created by Claudia Arias 2024
+                Claudia Arias 2024
             </div>
 
             <div className="footer-nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><Link className={path === "/" ? "active"  : ""} to="/">Home</Link></li>
+                    <li><Link className={path === "/about" ? "active" : ""} to="/about">About</Link></li>
+                    <li><Link className={path === "/contact" ? "active" : ""} to="/contact">Contact</Link></li>
                 </ul>
             </div>
         </div>
     )
 }
 
-export default Footer
+export default Footer;

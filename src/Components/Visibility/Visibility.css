@@ -1,5 +1,5 @@
 .visibility {
-    background: #f6f6f6;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -7,16 +7,40 @@
     justify-content: center;
     gap: 5px;
     width: 500px;
-    /* height: 200px; */
     box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+    color: white;
 }
 
 .visibility p {
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .visibility .vis-num {
     font-size: 38px;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+.visibility .vis-num span {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+
+@media (max-width: 430px) {
+    .visibility {
+        background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 400px;
+        box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+        color: white;
+    }
 }

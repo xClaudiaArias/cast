@@ -13,7 +13,7 @@ const MainWeather = ({ weather, dummyData }) => {
                 <p className='location'><strong>{weather.name}</strong>, {weather.sys.country}</p>
                 <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="" width="150px" height="150px"/>
                 <p className='main-description'>{weather.weather[0].main}</p>
-                <p className='temp'>{toFahrenheit(weather.main.temp)}°</p>
+                <p className='temp'>{toFahrenheit(weather.main.temp)}°f</p>
                 <p className='description'>{weather.weather[0].description}</p>
                 <hr />
                 <div className="min-max">
@@ -26,12 +26,12 @@ const MainWeather = ({ weather, dummyData }) => {
                 <p className='location'><strong>{dummyData.name}</strong>, {dummyData.sys.country}</p>
                 <img src={`https://openweathermap.org/img/wn/${dummyData.weather[0].icon}@2x.png`} alt="" width="150px" height="150px"/>
                 <p className='main-description'>{dummyData.weather[0].main}</p>
-                <p className='temp'>{toFahrenheit(dummyData.main.temp)}°</p>
+                <p className='temp'>{toFahrenheit(dummyData.main.temp)}°f</p>
                 <p className='description'>{dummyData.weather[0].description}</p>
                 <hr />
                 <div className="min-max">
-                    <p><strong>Min:</strong> <span>{toFahrenheit(dummyData.main.temp_min)}°</span></p>
-                    <p><strong>Max:</strong> <span>{toFahrenheit(dummyData.main.temp_max)}°</span></p>
+                    <p><strong>Min:</strong> <span>{toFahrenheit(dummyData.main.temp_min)}°f</span></p>
+                    <p><strong>Max:</strong> <span>{toFahrenheit(dummyData.main.temp_max)}°f</span></p>
                 </div>
             </div>
         )

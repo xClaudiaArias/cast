@@ -1,5 +1,6 @@
 import React from 'react'
 import './Humidity.css'
+import WaterIcon from '@mui/icons-material/Water';
 
 
 const Humidity = (props) => {
@@ -7,8 +8,8 @@ const Humidity = (props) => {
 
     return (
         <div className='humidity'>
-            <p>Humidity</p>
-            { weather ? <p className='hum-num'>{weather.main.humidity}</p> : <p className='hum-num'>{dummyData.main.humidity}</p>}
+            <p><WaterIcon/>Humidity</p>
+            { weather ? <p className='hum-num'>{weather.main.humidity}%</p> : <p className='hum-num'>{dummyData.main.humidity}%</p>}
         </div>
     )
 }

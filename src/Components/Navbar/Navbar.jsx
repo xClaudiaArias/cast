@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
-import cloud_icon from '../../Assets/cloud-icon.png'
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 import SearchBar from '../SearchBar/SearchBar'
 import { useLocation } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="logo">
-                <img className='cloud-icon' src={cloud_icon} alt="Cloud Icon" />
+                <ThermostatIcon style={{fill: "#6eb6ff"}}/>
                 <p>CAST</p>
             </div>
 

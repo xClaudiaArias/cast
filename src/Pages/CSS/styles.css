@@ -221,7 +221,7 @@
 }
 
 .left-contact form .contact-inputs input {
-    width: 380px;
+    width: 396px;
     border: none;
     box-shadow: inset 2px 1px 4px rgba(0, 0, 0, .20);
     border-radius: 4px;
@@ -284,4 +284,23 @@
     align-items: center;
     border-radius: 16px;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .20);
+}
+
+@media (max-width: 430px) {
+    .home {
+        width: 430px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 10px 0;
+    } .home .main-w {
+        width: 400px;
+    }
+    
+    .home .weather-descriptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

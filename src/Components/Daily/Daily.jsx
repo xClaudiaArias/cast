@@ -24,7 +24,7 @@ const Daily = ({forecast, dummyForecast}) => {
                             <div>
                                 <img src={`https://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png`} alt={w.weather.description} />
                             </div>
-                            <p className="deg"><strong>{toFahrenheit(w.main.temp)}°</strong></p>
+                            <p className="deg"><strong>{toFahrenheit(w.main.temp)}°f</strong></p>
                         </li>
                     ))
                     
@@ -36,7 +36,7 @@ const Daily = ({forecast, dummyForecast}) => {
                             <div>
                                 <img src={`https://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png`} alt={w.weather.description} />
                             </div>
-                            <p className="deg"><strong>{toFahrenheit(w.main.temp)}°</strong></p>
+                            <p className="deg"><strong>{toFahrenheit(w.main.temp)}°f</strong></p>
                         </li>
                     ))
                     
