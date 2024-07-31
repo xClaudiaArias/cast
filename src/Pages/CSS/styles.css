@@ -4,12 +4,17 @@
     gap: 20px;
 }
 
+.home .main-w  {
+
+}
+
 .home .weather-descriptions {
     display: flex;
     justify-content: space-between;
     flex: 2;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    width: 650px;
 }
 
 /* about  */

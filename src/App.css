@@ -9,7 +9,7 @@ body {
     border-radius: 16px;
 }
 
-@media (max-width: 430px) {
+@media screen and (max-width: 430px) {
     body {
         padding: 2px;
         background-repeat: no-repeat;

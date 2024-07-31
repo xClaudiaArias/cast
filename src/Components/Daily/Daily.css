@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 1020px;
+    width: 860px;
     border-radius: 8px;
     background: linear-gradient(to right, #e0c3fc, #8ec5fc);
     box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
@@ -17,7 +17,7 @@
 }
 
 .daily ul {
-    width: 1000px;
+    width: 830px;
     height: inherit;
     display: flex;
     align-items: center;
