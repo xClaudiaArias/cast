@@ -4,11 +4,15 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 require('dotenv').config();
 
-
 const app = express();
 
+app.use(express.static(path.join(__dirname, '../client/build')))
 app.use(bodyParser.json());
 app.use(cors());
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'))
+})
 
 app.post('/contact', (req, res) => {
     const { fullname, email, message } = req.body;
