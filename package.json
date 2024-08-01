@@ -2,6 +2,8 @@
     "name": "cast",
     "version": "1.0.0",
     "scripts":  {
+    "start": "node server.js",
+    "postinstall": "npm install",
         "start:client": "cd client && npm start",
         "build:client": "cd client && npm install && npm run build",
         "start:server": "cd server && npm install and npm start",
