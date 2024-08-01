@@ -1,0 +1,179 @@
+.daily {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 860px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+    color: white;
+}
+
+.daily h1 {
+    font-weight: 300;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.daily ul {
+    width: 830px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    list-style-type: none;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.daily ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily ul li p {
+    font-size: 20px;
+}
+
+.daily ul li .deg {
+    font-size: 30px;
+}
+
+
+@media (max-width: 430px) {
+    .daily {
+        background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 400px;
+        box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+        color: white;
+        height: 200px;
+    }
+    .daily h1 {
+        font-weight: 300;
+        margin-bottom: 1px;
+        padding-bottom: 2px;
+    }
+    .daily ul {
+        width: 400px;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        list-style-type: none;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .daily ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width: 820px) {
+    .daily {
+        background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: calc(560px / 2 );
+        box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+        color: white;
+        height: 200px;
+    }
+    .daily h1 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 1px;
+        padding-bottom: 12px;
+    }
+    .daily ul {
+        width: calc((420px / 2 ) - 20px);
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        list-style-type: none;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .daily ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+    
+}
+
+@media (max-width: 1204px) {
+    .daily {
+        background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: calc(900px / 2 );
+        box-shadow: 2px 2px 4px rgba(0,0,0, 0.16);
+        color: white;
+        height: 200px;
+    }
+    .daily h1 {
+        font-size: 28px;
+        font-weight: 300;
+        margin-bottom: 1px;
+        padding-bottom: 12px;
+    }
+    .daily ul {
+        width: calc((880px / 2 ) - 20px);
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        list-style-type: none;
+        overflow: hidden;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .daily ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+}
